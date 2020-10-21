@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+
+/* Navigation Bar */
+#myNavbar {
+	
+	max-width:600px;
+	margin:auto;
+	
+}
+/* Body of all pages */
+
+
+
+body {
+	background-color: white;
+}
+
+
+.col-sm-3 {
+	max-width: 500px;
+	background:white;
+	color: gray;
+	padding: 20px;
+	margin: auto;
+	text-align: center;
+}
+
+/*Main page or index.html */
+.mainpage {
+	max-width: 900px;
+	margin: auto;
+}
+
+.mainpage h1{
+	text-align: center;
+}
+
+/*Recipe Title */
+.recipe-title {
+	font-size: 20px;
+}
+
+.recipes img {
+	border-radius: 60%;
+	width: 200px;
+	height: 200px;
+}
+
+/*SCD approved Foods List */
+.approvedlist {
+	text-align: center;
+}
+
+
+/*Restaraunt page */
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 75%;
+  margin: auto;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* recipe  */
+
+
+.recipe img {
+	 height: 200px;
+     background-position: 50% 50%;
+     background-repeat: no-repeat;
+     background-size: cover;
+     border-radius: 25px;       
+}
+
+/* Footer */
+
+.footer {	
+position: absolute;
+left: 0;
+bottom: 0;
+
+width: 100%;  
+font-size: 20px;
+flex-shrink: 0; 
+padding: 20px;
+text-align: center;
+background-color: black;
+}
+
+
+
+.socialicons {
+	float: right;
+}
+
+
+.fa {
+	padding: 10px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#socialicons {
+	float: right;
+}
+
+#fa {
+	padding: 10px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+
+}
+

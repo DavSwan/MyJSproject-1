@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- tab icon  -->
+<link rel="icon" href="img/greenpea.png">
+
+<title>Restaurants</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	#map {
+		height: 300px;
+		width: 75%;
+}
+</style>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<link rel="stylesheet" type="text/css" href="SCD.css">
+</head>
+
+ <nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+   <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     	<a class="navbar-brand" href="index.html">Laur Approved</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="ApprovedList.html">Approved List</a></li>
+        <li><a href="FoodBrands.html">Food Brands</a></li>
+        <li><a href="restaurants.html">Restaurants</a>
+        <li><a href="recipes.html">Recipes</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body>
+	<div id="map"></div>
+	<script>
+	function initMap() {
+		  var Pittsburgh = {lat:40.4406, lng:-79.9959};
+		  var map = new google.maps.Map(document.getElementById('map'), {
+		    zoom: 11,
+		    center: Pittsburgh
+		  });
+		  
+		  
+		  var ContactUs = function() {
+			  return {
+			    //main function to initiate the module
+			    init: function() {
+			      var markers = [];
+			      var map;
+			      var infowindow = new google.maps.InfoWindow();
+			      map = new google.maps.Map(document.getElementById("map"), {
+			        zoom: 11,
+			        center: {
+			          lat: 40.4406,
+			          lng: -79.9959
+			        }
+			      });
+
+			   // Initialization Google Map Temp Infowindow
+			      infowindow = new google.maps.InfoWindow({
+			        content: "Initializing..."
+			      });
+			      
+			      
+		  function addMarkerWithTimeout(position, timeout, icon, content) {
+		        window.setTimeout(function() {
+		          var marker = new google.maps.Marker({
+		            position: position,
+		            map: map,
+		            animation: google.maps.Animation.DROP,
+		            icon: icon
+		          });
+		          google.maps.event.addListener(marker, 'click', function(e) {
+		            infowindow.setContent(content);
+		            infowindow.open(map, marker);
+		          });
+		          markers.push(marker);
+		        }, timeout);
+		      }
+		  
+		  var neighborhoods = [{
+		        lat: 40.488009,
+		        lng: -79.888170,
+		        content:'<a href=aladdins.html>Aladdins Eatery</a>'
+		      },{
+		        lat: 40.530232,
+		        lng: -80.010679,
+		        content:'<a href=aladdins.html>Aladdins Eatery</a>'
+		      },{
+		    	lat:40.437922,
+		    	lng:-79.919931,
+		    	content:'<a href=aladdins.html>Aladdins Eatery</a>'
+		      },{
+			    lat:40.489148,
+			    lng:-79.892916,
+			    content:'<a href=burgatory.html>Burgatory</a>'
+		      },{
+			  	lat:40.446167,
+				lng:-80.010906,
+				content:'<a href=burgatory.html>Burgatory</a>'
+		      },{
+				lat:40.569749, 
+				lng:-80.021535,
+				content:'<a href=burgatory.html>Burgatory</a>'
+		      },{
+				lat:40.407341,  
+				lng:-79.917902,
+				content:'<a href=burgatory.html>Burgatory</a>'
+		      }];
+		  
+		// Declare Global Variable
+		  var image;
+		  var markers = [];
+		  var map;
+		  var infowindow;
+		  
+
+	      for (var i = 0; i < neighborhoods.length; i++) {
+	        addMarkerWithTimeout(neighborhoods[i], i * 300, neighborhoods[i].icon, neighborhoods[i].content);
+	      }
+	    }
+	  };
+	}();
+	ContactUs.init();  
+		  
+	// Initialization Google Map Temp Infowindow
+	  infowindow = new google.maps.InfoWindow({
+	    content: "Initializing..."
+	  });
+	}
+    </script>
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2YO9nauZiavpXZru0iuJ0M1-BhOBHrYw&callback=initMap">
+    </script>
+
+	<div id="googleMap" style="width: 100%; height: 400px;"></div>
+
+<!-- Footer -->
+		<footer class="footer" style="position: fixed; bottom: 0; left: 0;">
+		<!-- copyright & year -->
+		&#169;
+		<script type="text/javascript">
+  		var today = new Date()
+ 		 var year = today.getFullYear()
+ 		 document.write(year)
+		</script>
+		<!-- Social media icons -->
+		<div class="socialicons">
+			<a href="#" class="fa fa-facebook"></a> <a href="#"
+				class="fa fa-twitter"></a> <a href="#" class="fa fa-instagram"></a>
+		</div>
+	</footer>
+
+
+</body>
+</html>

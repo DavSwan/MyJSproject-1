@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- tab icon  -->
+<link rel="icon" href="img/greenpea.png">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Milk</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<link rel="stylesheet" type="text/css" href="SCD.css">
+
+<style>
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  /* float: left;
+  padding: 50px;
+  margin: 0 auto;
+*/
+display:inline-block;
+    margin:5px 20px;
+    padding:5px;
+  }
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+   margin: 0 auto;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {	
+	position: fixed !important;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+   
+  font-size: 20px;
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+}
+
+
+
+</style>
+
+</head>
+<!-- Nav bar on top of each page -->
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#myNavbar">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">Laur Approved</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="ApprovedList.html">Approved List</a></li>
+				<li><a href="FoodBrands.html">Food Brands</a></li>
+				<li><a href="restaurants.html">Restaurants</a>
+
+
+					<li><a href="recipes.html">Recipes</a>
+      
+			</ul>
+    </div>
+  </div>
+</nav>
+<body>
+<h1>Milk</h1>
+<!-- Set tiles with images and title for recipe sections -->
+<div class="recipe">
+	<!-- Breakfast, link to recipes -->
+  <div class="column">
+   <img src="img/almondmilkbluediamond.jpg" alt="Almond Milk" >
+   <p>Blue Diamond Unsweetened Vanilla Almond Milk</p>
+  </div>
+  <!-- Lunch, link to recipes -->
+  <div class="column">
+    <img src="img/coconutmilk365.jpg" alt="Coconut Milk can" >
+    <p>365 Coconut Milk</p>
+  </div>
+  <!-- Dinner, link to recipes -->
+  <div class="column">
+   <img src="img/coconutmilknativeforest.jpg" alt="Coconut Milk can" >
+    <p>Native Forest Coconut Milk</p>
+  </div>
+  <!-- Dessert, link to recipes -->
+  <div class="column">
+   <img src="img/coconutmilksodelicious.jpg" alt="Coconut Milk can" >
+    <p>SO Delicious Coconut Milk</p>
+  </div>
+ 
+</div>
+ 
+<!-- Footer -->
+		<footer class="footer">
+		<!-- copyright & year -->
+		&#169;
+		<script type="text/javascript">
+  		var today = new Date()
+ 		 var year = today.getFullYear()
+ 		 document.write(year)
+		</script>
+		<!-- Social media icons -->
+		<div class="socialicons">
+			<a href="#" class="fa fa-facebook"></a> <a href="#"
+				class="fa fa-twitter"></a> <a href="#" class="fa fa-instagram"></a>
+		</div>
+	</footer>
+ 
+
+</body>
+</html>
